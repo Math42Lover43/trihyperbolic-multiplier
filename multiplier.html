@@ -20,11 +20,82 @@
 			
 		</div>
 		<button onclick="multiply();">
-
+			Multiply
 		</button>
-		<div id="result">
+		<table id="result">
+			<tr>
+				<td>
+					1
+				</td>
+				<td id="res00">
 
-		</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&eth;
+				</td>
+				<td id="res10">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&ETH;
+				</td>
+				<td id="res20">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&thorn;
+				</td>
+				<td id="res01">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&eth;&thorn;
+				</td>
+				<td id="res11">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&ETH;&thorn;
+				</td>
+				<td id="res21">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&THORN;
+				</td>
+				<td id="res02">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&eth;&THORN;
+				</td>
+				<td id="res12">
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&ETH;&THORN;
+				</td>
+				<td id="res22">
+
+				</td>
+			</tr>
+		</table>
 	</body>
 	<script>
 		var inserts = 0;
@@ -43,6 +114,22 @@
 				</div>
 			`;
 			inserts++;
+		}
+		function multiply() {
+			var num1 = [];
+			var num2 = [];
+			for(let a = 0; a < 3; a++) {
+				for(let b = 0; b < 3; b++) {
+					num1.push(document.getElementById(`thnum0${b}${a}`).value);
+					num2.push(document.getElementById(`thnum1${b}${a}`).value);
+					document.getElementById(`res${b}${a}`).innerHTML = "";
+				}
+			}
+			for(let b = 0; b < 9; b++) {
+				for(let a = 0; a < 9; a++) {
+					document.getElementById(`res${(a + b) % 3}${(Math.floor(a / 3) + Math.floor(b / 3)) % 3}`).innerHTML += `+ (${num1[a]})(${num2[b]}) `;
+				}
+			}
 		}
 		insertfact("factor1");
 		insertfact("factor1");
