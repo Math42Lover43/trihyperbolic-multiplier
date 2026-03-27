@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Trihyperbolic multiplier
+		</title>
+		<meta charset="utf-8">
+		<style>
+			body, input {
+				font-family: 'Times New Roman';
+				font-size: 18pt;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="factor1">
+			
+		</div>
+	</body>
+	<script>
+		var inserts = 0;
+		function insertfact(id) {
+			document.getElementById(id).innerHTML += `
+				<input id="thnum${inserts}00" value="1"/> +
+				<input id="thnum${inserts}10"/>&eth; +
+				<input id="thnum${inserts}20"/>&Eth; +
+				<input id="thnum${inserts}01"/>&thorn; +
+				<input id="thnum${inserts}11"/>&eth;&thorn; +
+				<input id="thnum${inserts}21"/>&Eth;&thorn; +
+				<input id="thnum${inserts}02"/>&Thorn; +
+				<input id="thnum${inserts}12"/>&eth;&Thorn; +
+				<input id="thnum${inserts}22"/>&Eth;&Thorn;
+			`;
+			inserts++;
+		}
+		insertfact("factor1");
+	</script>
+</html>
