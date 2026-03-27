@@ -8,13 +8,22 @@
 		<style>
 			body, input {
 				font-family: 'Times New Roman';
-				font-size: 18pt;
+				font-size: 12pt;
+			}
+			input {
+				width: 10%;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="factor1">
 			
+		</div>
+		<button onclick="multiply();">
+
+		</button>
+		<div id="result">
+
 		</div>
 	</body>
 	<script>
@@ -23,16 +32,17 @@
 			document.getElementById(id).innerHTML += `
 				<input id="thnum${inserts}00" value="1"/> +
 				<input id="thnum${inserts}10"/>&eth; +
-				<input id="thnum${inserts}20"/>&Eth; +
+				<input id="thnum${inserts}20"/>&ETH; +
 				<input id="thnum${inserts}01"/>&thorn; +
 				<input id="thnum${inserts}11"/>&eth;&thorn; +
-				<input id="thnum${inserts}21"/>&Eth;&thorn; +
-				<input id="thnum${inserts}02"/>&Thorn; +
-				<input id="thnum${inserts}12"/>&eth;&Thorn; +
-				<input id="thnum${inserts}22"/>&Eth;&Thorn;
+				<input id="thnum${inserts}21"/>&ETH;&thorn; +
+				<input id="thnum${inserts}02"/>&THORN; +
+				<input id="thnum${inserts}12"/>&eth;&THORN; +
+				<input id="thnum${inserts}22"/>&ETH;&THORN;
 			`;
 			inserts++;
 		}
+		insertfact("factor1");
 		insertfact("factor1");
 	</script>
 </html>
