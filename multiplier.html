@@ -30,15 +30,17 @@
 		var inserts = 0;
 		function insertfact(id) {
 			document.getElementById(id).innerHTML += `
-				<input id="thnum${inserts}00" value="1"/> +
-				<input id="thnum${inserts}10"/>&eth; +
-				<input id="thnum${inserts}20"/>&ETH; +
-				<input id="thnum${inserts}01"/>&thorn; +
-				<input id="thnum${inserts}11"/>&eth;&thorn; +
-				<input id="thnum${inserts}21"/>&ETH;&thorn; +
-				<input id="thnum${inserts}02"/>&THORN; +
-				<input id="thnum${inserts}12"/>&eth;&THORN; +
-				<input id="thnum${inserts}22"/>&ETH;&THORN;
+				<div style="padding: 5px;">
+					<input id="thnum${inserts}00" value="1"/> +
+					<input id="thnum${inserts}10"/>&eth; +
+					<input id="thnum${inserts}20"/>&ETH; +
+					<input id="thnum${inserts}01"/>&thorn; +
+					<input id="thnum${inserts}11"/>&eth;&thorn; +
+					<input id="thnum${inserts}21"/>&ETH;&thorn; +
+					<input id="thnum${inserts}02"/>&THORN; +
+					<input id="thnum${inserts}12"/>&eth;&THORN; +
+					<input id="thnum${inserts}22"/>&ETH;&THORN;
+				</div>
 			`;
 			inserts++;
 		}
